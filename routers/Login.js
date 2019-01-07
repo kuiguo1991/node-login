@@ -28,20 +28,34 @@ router.get("/", function (req, res) {
 
 //用户登录
 const loginStr = ygSQL.LoginSQL;
-//const addsqlparams = [param.name, param.url, param.alexa, param.country];
-// const addsqlparams = ['百度', 'https://www.baidu.com', '20','China'];
+
 router.post("/Login", function (req, res) {
-    const param = req.query || req.params; 
+    // console.log(req.body) 
+    const param =  req.body; 
     const USERNAME = param.USERNAME;
     const PASSWORD = param.PASSWORD;
     const loginParams = [USERNAME, PASSWORD]
     connection.query(loginStr, loginParams,(err,results) => {
         if (!err) {
-        return res.json({
-            code: 200,
-            message: "登录成功",
-            isLogin: results
-        });
+            if(results.length!=0){
+                return res.json({
+                    code: 200,
+                    message: "登录成功",
+                    isLogin: true               
+                });
+            }else{
+                return res.json({
+                    code: 200,
+                    message: "登录失败",
+                    isLogin: false               
+                });
+            }
+        }else{
+            return res.json({
+                code: 500,
+                message: "服务器错误",
+                isLogin: false               
+            });
         }
     });
 })

@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
-// const mysql = require('mysql');
-// const models = require("./db/db");
+
 const LoginRouter= require('./routers/Login');
 const bodyParser = require("body-parser");
 
@@ -20,8 +19,9 @@ app.all('*', function (req, res, next) {
       next();
     }
   });
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 app.use("/api/LoginUser", LoginRouter);
 app.listen(5551, () => {
     console.log("正在监听端口5551,http://localhost:5551/api"); //192.168.1.114换成你的ip,本机ip查询用cmd=>ipconfig
