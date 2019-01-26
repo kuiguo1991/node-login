@@ -1,36 +1,33 @@
-const express = require("express");
-const router = express.Router();
 const mysql = require("mysql");
 const ygSQL = require("../db/ygSQL");
 const models = require("../db/db");
 var connection = mysql.createConnection(models.mysql);
 connection.connect();
 
-//查询
+
+
 const sqlStr = ygSQL.queryAllSQL;
-router.get("/", function (req, res) {
+const user = function(req, res){
     connection.query(sqlStr, (err, results) => {
-      if (err) {
+        if (!err) {
             return res.json({
-                    code: 500,
-                    message: "error",
-                });
-              }
-        else{
-              res.json({
-                    code: 200,
-                    message: "success",
-                    result: results
-              });
+                code: 200,
+                message: "success",
+                result: results
+                })
             }
-    });
-})
+          else{
+            return res.json({
+                code: 500,
+                message: "error",
+                })
+            }
+      });
+}
 
-//用户登录
+
 const loginStr = ygSQL.LoginSQL;
-
-router.post("/Login", function (req, res) {
-    // console.log(req.body) 
+const login = function(req, res){
     const param =  req.body; 
     const USERNAME = param.USERNAME;
     const PASSWORD = param.PASSWORD;
@@ -45,9 +42,9 @@ router.post("/Login", function (req, res) {
                 });
             }else{
                 return res.json({
-                    code: 200,
-                    message: "登录失败",
-                    isLogin: false               
+                    code: 400,
+                    message: "账号或密码错误",
+                    isLogin: false              
                 });
             }
         }else{
@@ -58,7 +55,9 @@ router.post("/Login", function (req, res) {
             });
         }
     });
-})
+}
 
-
-module.exports = router;
+module.exports = {
+    user:user,
+    login:login
+}
