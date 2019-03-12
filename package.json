@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "pm": "pm2 start app.js"
+    "pm": "pm2 start app.js",
+    "apidoc": "apidoc -i routers/ -o apidoc/"
   },
   "repository": {
     "type": "git",
