@@ -4,9 +4,9 @@
   "description": "登录系统",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "pm": "pm2 start app.js",
+    "nodemon":"nodemon jwt.js",
     "apidoc": "apidoc -i routers/ -o apidoc/"
   },
   "repository": {
@@ -25,5 +25,8 @@
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.16.0",
     "node-rsa": "^1.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
