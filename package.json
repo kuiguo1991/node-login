@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "pm": "pm2 start app.js",
-    "nodemon": "nodemon jwt.js",
+    "nodemon": "nodemon app.js",
     "apidoc": "apidoc -i routers/ -o apidoc/"
   },
   "repository": {
