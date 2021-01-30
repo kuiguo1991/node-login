@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-09-14 09:30:23
- * @LastEditTime: 2021-01-30 15:20:55
+ * @LastEditTime: 2021-01-30 17:15:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \github\node-login\controllers\login.js
@@ -10,28 +10,11 @@ const mysql = require("mysql");
 const ygSQL = require("../db/ygSQL");
 const models = require("../db/db");
 var connection = mysql.createConnection(models.mysql);
+
 connection.connect();
-
-const sqlStr = ygSQL.queryAllSQL;
-const user = function (req, res) {
-  connection.query(sqlStr, (err, results) => {
-    if (err) {
-      return res.json({
-        code: 500,
-        message: "失败",
-        success: false,
-      });
-    }
-    return res.json({
-      code: 200,
-      message: "成功",
-      success: true,
-      data: results,
-    });
-  });
-};
-
-const loginStr = ygSQL.LoginSQL;
+//查询用户信息
+//登录
+const loginStr = ygSQL.login.LoginSQL;
 const login = function (req, res) {
   const param = req.body;
   const USERNAME = param.USERNAME;
@@ -47,7 +30,7 @@ const login = function (req, res) {
         });
       } else {
         return res.json({
-          code: 400,
+          code: 500,
           message: "账号或密码错误",
           isLogin: false,
         });
@@ -63,6 +46,5 @@ const login = function (req, res) {
 };
 
 module.exports = {
-  user: user,
   login: login,
 };
