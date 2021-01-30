@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-09-14 09:30:23
- * @LastEditTime: 2021-01-29 10:18:04
+ * @LastEditTime: 2021-01-29 18:11:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \github\node-login\jwt.js
@@ -22,11 +22,10 @@ const secret = "STUDYJWT";
 const token = jwt.sign(payload, secret, { expiresIn: 60 * 60 * 24 }); //expiresIn设置为24小时过期
 
 // 输出签发的 Token
-console.log("1222", token);
+console.log("123456789", token);
 
 jwt.verify(token, "STUDYJWT", (error, decoded) => {
   if (error) {
-    console.log(error.message);
     return;
   }
   console.log(decoded);
