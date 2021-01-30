@@ -122,6 +122,70 @@
     ]
   },
   {
+    "type": "post",
+    "url": "/api/system/updUser",
+    "title": "更新用户",
+    "description": "<p>更新用户</p>",
+    "name": "updUser",
+    "group": "Users",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "number",
+            "optional": false,
+            "field": "id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "name",
+            "description": "<p>姓名</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "url",
+            "description": "<p>地址</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "area",
+            "description": "<p>区域</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "country",
+            "description": "<p>国家</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "cipher",
+            "description": "<p>密码</p>"
+          }
+        ]
+      }
+    },
+    "version": "1.0.0",
+    "filename": "routers/index.js",
+    "groupTitle": "Users",
+    "sampleRequest": [
+      {
+        "url": "http://127.0.0.1:5555/api/system/updUser"
+      }
+    ]
+  },
+  {
     "type": "get",
     "url": "/api/system/user",
     "title": "获取用户",

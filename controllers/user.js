@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-01-30 17:12:26
- * @LastEditTime: 2021-01-30 17:15:34
+ * @LastEditTime: 2021-01-30 17:37:46
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \github\node-login\controllers\user.js
@@ -77,12 +77,16 @@ const delUser = function (req, res) {
 };
 
 //更新用户信息
-const updSQL = ygSQL.delSQL;
+const updSQL = ygSQL.user.updSQL;
 const updUser = function (req, res) {
   const param = req.body;
-  const updParams = {
-    id: param.id,
-  };
+  const id = param.id;
+  const name = param.name;
+  const url = param.url;
+  const area = param.area;
+  const country = param.country;
+  const cipher = param.cipher;
+  const updParams = [name, url, area, country, cipher,id];
   connection.query(updSQL, updParams, (err, results) => {
     if (err) {
       return res.json({
@@ -93,7 +97,7 @@ const updUser = function (req, res) {
     return res.json({
       code: 200,
       success: true,
-      message: "删除成功",
+      message: "更新成功",
     });
   });
 };
