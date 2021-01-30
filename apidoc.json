@@ -3,7 +3,8 @@
     "version": "1.1.1",
     "description": "nodejs 调用api接口",
     "title": "api接口",
-    "url": "http://192.168.0.191:5555"
+    "url": "http://127.0.0.1:5555",
+    "sampleUrl":"http://127.0.0.1:5555"
 }
 
 

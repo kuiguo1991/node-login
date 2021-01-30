@@ -28,7 +28,12 @@ define({ "api": [
     },
     "version": "1.0.0",
     "filename": "routers/index.js",
-    "groupTitle": "loginUsers"
+    "groupTitle": "loginUsers",
+    "sampleRequest": [
+      {
+        "url": "http://127.0.0.1:5555/api/loginUsers/login"
+      }
+    ]
   },
   {
     "type": "get",
@@ -39,6 +44,11 @@ define({ "api": [
     "group": "loginUsers",
     "version": "1.0.0",
     "filename": "routers/index.js",
-    "groupTitle": "loginUsers"
+    "groupTitle": "loginUsers",
+    "sampleRequest": [
+      {
+        "url": "http://127.0.0.1:5555/api/loginUsers/user"
+      }
+    ]
   }
 ] });

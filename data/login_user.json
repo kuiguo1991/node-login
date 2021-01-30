@@ -1,34 +1,18 @@
 [
   {
-    "id": 123,
-    "name": "sada",
-    "url": "222",
+    "id": 1,
+    "name": "112",
+    "url": "wqeqwe",
     "age": 0,
-    "area": null,
-    "country": null
+    "area": "qweqwe",
+    "country": "eqwe"
   },
   {
-    "id": 123333,
-    "name": "asdasd",
-    "url": "dasdasd",
+    "id": 2,
+    "name": "1233",
+    "url": "213213",
     "age": 0,
-    "area": null,
-    "country": null
-  },
-  {
-    "id": 12222222,
-    "name": "122",
-    "url": "2222",
-    "age": 0,
-    "area": null,
-    "country": null
-  },
-  {
-    "id": 1232222222,
-    "name": "12",
-    "url": "22",
-    "age": 0,
-    "area": null,
-    "country": null
+    "area": "3123",
+    "country": "23123"
   }
 ]
