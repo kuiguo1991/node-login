@@ -1,0 +1,33 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "登录系统",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "pm": "pm2 start app.js",
+    "nodemon": "nodemon app.js",
+    "apidoc": "apidoc -i routers/ -o apidoc/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuiguo1991/node-login.git"
+  },
+  "author": "yuguo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kuiguo1991/node-login/issues"
+  },
+  "homepage": "https://github.com/kuiguo1991/node-login#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.16.0",
+    "node-rsa": "^1.1.1"
+  },
+  "devDependencies": {
+    "apidoc": "^0.26.0",
+    "nodemon": "^2.0.7"
+  }
+}
