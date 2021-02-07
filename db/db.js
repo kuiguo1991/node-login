@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-09-14 09:30:23
- * @LastEditTime: 2020-09-14 09:43:55
- * @LastEditors: your name
+ * @LastEditTime: 2021-02-07 09:54:51
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \github\node-login\db\db.js
  */
@@ -12,6 +12,6 @@ module.exports = {
     user: "root",
     password: "123456",
     port: "3306",
-    database: "login",
+    database: "yuguo",
   },
 };

@@ -1,21 +1,18 @@
 /*
  * @Author: your name
  * @Date: 2020-09-14 09:30:23
- * @LastEditTime: 2021-01-30 17:35:18
+ * @LastEditTime: 2021-02-07 10:02:39
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \github\node-login\db\ygSQL.js
  */
 module.exports = {
   user: {
-    queryAllSQL: "SELECT * FROM user",
+    queryAllSQL: "SELECT * FROM yg_users",
     addSQL:
-      "INSERT INTO user(id, name, url, area, country, cipher) VALUES(0,?,?,?,?,?)",
+      "INSERT INTO yg_users(user_id, username, password, avatar, create_time, login_status,user_rule) VALUES(0,?,?,?,?,?)",
     updSQL:
-      "UPDATE user SET name = ?, url = ?, area = ?, country = ?,cipher =? WHERE id = ?",
-    delSQL: "DELETE FROM user where id = ?",
-  },
-  login: {
-    LoginSQL: "SELECT * FROM user WHERE name = ? AND cipher = ?",
+      "UPDATE yg_users SET username = ?, password = ?, avatar = ?, login_status = ? ,user_rule = ? WHERE user_id = ?",
+    delSQL: "DELETE FROM yg_users where user_id = ?",
   },
 };

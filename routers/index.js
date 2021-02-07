@@ -1,14 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2020-09-14 09:30:23
- * @LastEditTime: 2021-01-30 17:38:04
+ * @LastEditTime: 2021-02-07 09:54:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \github\node-login\routers\index.js
  */
 const express = require("express");
 const router = express.Router();
-const Login = require("../controllers/login");
 const User = require("../controllers/user");
 
 /**
@@ -62,16 +61,5 @@ router.post("/system/delUser", User.delUser);
  */
 
 router.post("/system/updUser", User.updUser);
-
-/**
- * @api {post} /api/system/login 用户登录
- * @apiDescription 用户登录
- * @apiName login
- * @apiGroup Login
- * @apiParam {string} USERNAME 用户名
- * @apiParam {string} PASSWORD 密码
- * @apiVersion 1.0.0
- */
-router.post("/system/login", Login.login);
 
 module.exports = router;
