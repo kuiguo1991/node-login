@@ -15,7 +15,7 @@ const {
   queryData,
   deleteData,
   updateData,
-} = require("../db/ygSQL");
+} = require("../db/userSQL");
 //查询用户信息
 // const sqlStr = ygSQL.user.queryAllSQL;
 const user = function (req, res) {
