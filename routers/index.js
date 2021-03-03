@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-09-14 09:30:23
- * @LastEditTime: 2021-02-07 09:54:22
+ * @LastEditTime: 2021-02-07 18:40:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \github\node-login\routers\index.js
@@ -25,11 +25,11 @@ router.get("/system/user", User.user);
  * @apiDescription 添加用户
  * @apiName addUser
  * @apiGroup Users
- * @apiParam {string} name姓名
- * @apiParam {string} url地址
- * @apiParam {string} area区域
- * @apiParam {string} country国家
- * @apiParam {string} cipher密码
+ * @apiParam {string} username姓名
+ * @apiParam {string} password密码
+ * @apiParam {string} avatar头像
+ * @apiParam {string} login_status登录状态
+ * @apiParam {string} user_rule 用户角色
  * @apiVersion 1.0.0
  */
 
@@ -51,12 +51,12 @@ router.post("/system/delUser", User.delUser);
  * @apiDescription 更新用户
  * @apiName updUser
  * @apiGroup Users
- * @apiParam {number} id
- * @apiParam {string} name姓名
- * @apiParam {string} url地址
- * @apiParam {string} area区域
- * @apiParam {string} country国家
- * @apiParam {string} cipher密码
+ * @apiParam {string}} user_id用户ID
+ * @apiParam {string} username用户名
+ * @apiParam {string} password密码
+ * @apiParam {string} avatar头像
+ * @apiParam {string} login_status登录状态
+ * @apiParam {string} user_rule 用户角色
  * @apiVersion 1.0.0
  */
 

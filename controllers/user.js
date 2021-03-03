@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-01-30 17:12:26
- * @LastEditTime: 2021-02-07 11:07:57
+ * @LastEditTime: 2021-02-07 18:44:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \github\node-login\controllers\user.js
@@ -68,6 +68,8 @@ const addUser = function (req, res) {
       });
     });
 };
+
+
 //删除用户信息
 const delUser = function (req, res) {
   const param = req.body;
