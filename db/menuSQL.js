@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-02 15:35:30
- * @LastEditTime: 2021-03-02 16:12:20
+ * @LastEditTime: 2021-03-03 09:51:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \node-login\db\menuSQL.js
@@ -28,9 +28,9 @@ const menu = {
     )`,
   querySQL: "SELECT * FROM yg_menus",
   addSQL:
-    "insert into yg_menus set user_id = ?, username = ?,password = ?,avatar = ?,create_time = ?, login_status = ?,user_rule = ?",
+    "insert into yg_menus set user_id = ?, menu_name = ?, menu_url = ?,parent_id = ?, menu_order = ?, menu_icon = ?, menu_type = ?",
   updSQL:
-    "UPDATE yg_menus SET username = ?, password = ?, avatar = ?, login_status = ? ,user_rule = ? WHERE user_id = ?",
+    "UPDATE yg_menus SET menu_name = ?, menu_url = ?, parent_id = ?, menu_order = ? , menu_icon = ?, menu_type = ? WHERE menu_id = ?",
   delSQL: "DELETE FROM yg_menus where user_id = ?",
 };
 
