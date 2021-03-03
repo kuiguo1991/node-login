@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-01-30 17:12:26
- * @LastEditTime: 2021-02-07 18:44:25
+ * @LastEditTime: 2021-03-03 09:58:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \github\node-login\controllers\user.js
@@ -15,9 +15,8 @@ const {
   queryData,
   deleteData,
   updateData,
-} = require("../db/userSQL");
-//查询用户信息
-// const sqlStr = ygSQL.user.queryAllSQL;
+} = require("../db/menuSQL");
+//查询菜单信息
 const user = function (req, res) {
   queryData()
     .then((results) => {
@@ -34,7 +33,7 @@ const user = function (req, res) {
       });
     });
 };
-//新增用户信息
+//新增菜单信息
 const addUser = function (req, res) {
   const param = req.body;
   const user_id = uuidv4();
@@ -68,9 +67,7 @@ const addUser = function (req, res) {
       });
     });
 };
-
-
-//删除用户信息
+//删除菜单信息
 const delUser = function (req, res) {
   const param = req.body;
   const delParams = [param.user_id];
@@ -90,7 +87,7 @@ const delUser = function (req, res) {
     });
 };
 
-//更新用户信息
+//更新菜单信息
 const updUser = function (req, res) {
   const param = req.body;
   const user_id = param.user_id;
